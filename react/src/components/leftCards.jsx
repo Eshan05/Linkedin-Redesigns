@@ -3,8 +3,8 @@ import { HiUserGroup } from "react-icons/hi";
 
 export const ProfileCard = () => {
   return (
-    <aside className="flex flex-col min-w-full">
-      <section className="relative w-full p-2 my-2 ml-2 bg-white shadow-sm rounded-xl">
+    <aside className="flex flex-col w-full h-full !m-0">
+      <section className="relative w-full p-2 my-2 bg-white shadow-sm rounded-xl">
         <header className="flex flex-col items-center gap-2 m-2 border-gray-400 md:flex-row space-around">
           <img
             src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
@@ -50,7 +50,7 @@ export const ProfileCard = () => {
           </div>
         </section>
       </section>
-      <section className="relative w-full p-2 my-2 ml-2 bg-white shadow-sm rounded-xl">
+      <section className="relative w-full p-2 my-2 bg-white shadow-sm rounded-xl">
         <header className="flex items-center justify-between p-2">
           <h2 className="font-bold text-md">My Pages</h2>
           <span className="inline-block w-6 font-bold text-center bg-gray-300 rounded-full aspect-square">2</span>
