@@ -1,19 +1,27 @@
 import { CgComment } from "react-icons/cg";
 import { WritePost } from "./writePost";
-import { FaHeart, FaRegThumbsUp, FaThumbsUp } from "react-icons/fa";
+import { FaGlobeAmericas, FaHeart, FaRegThumbsUp, FaThumbsUp } from "react-icons/fa";
 import { PiShareFatLight } from "react-icons/pi";
 import { LuSend } from "react-icons/lu";
+import { GoGlobe } from "react-icons/go";
+import { BsThreeDots } from "react-icons/bs";
 const Posts = () => {
   return (
     <div className="w-full">
       <WritePost />
       <article className="my-4 bg-white rounded-xl">
-        <header className="flex p-3 gap-x-2">
+        <header className="flex w-full p-3 gap-x-2">
           <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" className="w-10 rounded-full aspect-square" />
-          <div className="flex flex-col">
-            <h2 className="font-bold">Aline Green <span className="text-sm font-light text-muted-foreground">🞄 2 days ago</span></h2>
-            <span className="inline-block text-sm font-medium text-muted-foreground">CEO at BearUI</span>
-          </div>
+          <section className="flex justify-between w-full">
+            <div className="flex flex-col">
+              <h2 className="font-bold">Aline Green <span className="text-sm font-light text-muted-foreground">🞄 2 days ago</span></h2>
+              <span className="inline-block text-sm font-medium text-muted-foreground">CEO at BearUI</span>
+            </div>
+            <div className="flex items-center !font-light text-gray-400 gap-x-1">
+              <span className="inline-block text-sm">3h 🞄 <FaGlobeAmericas className="inline-block w-4 h-4 mb-[.175rem] aspect-square" /></span>
+              <BsThreeDots className="ml-2" />
+            </div>
+          </section>
         </header>
         <main>
           <p className="p-3">Hello there!</p>
