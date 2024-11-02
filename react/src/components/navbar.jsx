@@ -1,13 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { IoLogoLinkedin, IoSearch } from "react-icons/io5";
 import { PiDotsNineBold, PiSignOut, PiSuitcase } from "react-icons/pi";
 import { HiCog, HiHome, HiInbox } from "react-icons/hi";
 import { CgCrown, CgProfile } from "react-icons/cg";
 import { IoChatbubblesOutline } from "react-icons/io5";
 import { GoBell } from "react-icons/go";
+import ThemeToggle from "./themeToggle";
 
 export const Navbar = () => {
-  // Set the default active index to 0 (the first button)
   const [activeIndex, setActiveIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -29,7 +29,7 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className="flex items-center justify-between h-[5.25rem] gap-x-3 gap-y-1 bg-white lg:px-6 lg:py-2 px-2">
+    <nav className="flex items-center justify-between h-[5.25rem] gap-x-3 gap-y-1 bg-white lg:px-6 lg:py-2 px-2 lg:mb-2">
       <aside className="items-center justify-center flex-1 hidden h-full lg:flex gap-x-2 ">
         <IoLogoLinkedin className="text-5xl text-[#006699]" />
         <div className="flex items-center w-3/5 px-3 mx-3 overflow-hidden border rounded-full bg-neutral-100">
@@ -87,10 +87,15 @@ export const Navbar = () => {
               className="absolute z-10 bg-white divide-y divide-gray-100 rounded-lg shadow top-1/2 right-1/2 w-44 dark:bg-gray-700 dark:divide-gray-600"
             >
               <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
-                <div>Linkedin Profile</div>
+                <section className="flex items-center space-between">
+                  <div className="mr-auto">Linkedin Profile</div>
+                  <div className="text-right">
+                    <ThemeToggle />
+                  </div>
+                </section>
                 <div className="font-medium truncate text-muted-foreground">name@gmail.com</div>
               </div>
-              <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="avatarButton">
+              <ul className="py-2 text-sm text-gray-700 border-b dark:text-gray-200 " aria-labelledby="avatarButton">
                 {dropdownItems.map((item, index) => (
                   <li key={index}>
                     <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
@@ -100,12 +105,13 @@ export const Navbar = () => {
                   </li>
                 ))}
               </ul>
+
             </div>
           }
           {/* <span className="hidden text-sm font-semibold pe-2 ps-2 text-neutral-500 2xl:inline">Name</span> */}
         </aside>
         <button className="flex items-center justify-center px-3 py-2 font-bold border-2 rounded-full gap-x-2 aspect-square xl:aspect-auto border-neutral-100">
-          <CgCrown className="text-xl text-yellow-600" />
+          <CgCrown className="text-2xl text-yellow-600" />
           <span className="hidden xl:block">Premium</span>
         </button>
       </section>

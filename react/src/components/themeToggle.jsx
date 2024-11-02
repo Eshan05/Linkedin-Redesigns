@@ -13,7 +13,7 @@ function ThemeToggle() {
     <div className="bg-yellow-">
       <button onClick={() => darkModeHandler()}>
         {dark && <IoSunny />}
-        {!dark && <IoMoon />}
+        {!dark && <IoMoon className="dark:text-white" />}
       </button>
     </div>
   );
