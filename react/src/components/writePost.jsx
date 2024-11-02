@@ -1,4 +1,4 @@
-import { CgCalendar, CgCalendarDates } from "react-icons/cg";
+import { CgCalendarDates } from "react-icons/cg";
 import { GoVideo } from "react-icons/go";
 import { IoImageOutline } from "react-icons/io5";
 import { PiPencil } from "react-icons/pi";
@@ -14,7 +14,7 @@ export const WritePost = () => {
         />
         <input className="w-full p-4 text-sm font-medium bg-gray-100 rounded-full" placeholder="Do you have any news to share?"></input>
       </header>
-      <section className="flex px-6 mx-auto my-2 text-lg text-gray-400 w-fit gap-x-10">
+      <section className="flex px-6 mx-auto my-2 text-lg text-gray-400 lg:ml-auto lg:mr-1 w-fit gap-x-10">
         <div className="flex items-center cursor-pointer">
           <IoImageOutline className="w-10 text-2xl aspect-square" />
           Image
