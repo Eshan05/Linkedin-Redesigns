@@ -57,12 +57,12 @@ export const ProfileCard = () => {
         <div className="flex items-center justify-between p-3 mx-2 my-3 dark:bg-[#242526] bg-gray-100 rounded-lg gap-x-3">
           <img src="https://cdn-icons-png.flaticon.com/512/4138/4138137.png" className="inline-block w-8 aspect-square" />
           <span className="inline-block mr-auto font-semibold text-muted-foreground">CropBox</span>
-          <button className="block py-3 px-5 rounded-lg bg-[#e9e9e9] text-sm font-bold text-gray-600">View</button>
+          <button className="block py-3 px-5 rounded-lg bg-[#e9e9e9] text-sm font-bold text-gray-600 dark:bg-[#2f3031] dark:text-muted-foreground">View</button>
         </div>
         <div className="flex items-center justify-between p-3 mx-2 my-3 dark:bg-[#242526] bg-gray-100 rounded-lg gap-x-3">
           <img src="https://png.pngtree.com/png-vector/20191201/ourmid/pngtree-round-objective-icon-circle-png-image_2060814.jpg" className="inline-block w-8 rounded-full aspect-square" />
           <span className="inline-block mr-auto font-semibold text-muted-foreground">Minimalism</span>
-          <button className="block py-3 px-5 rounded-lg bg-[#e9e9e9] text-sm font-bold text-gray-600">View</button>
+          <button className="block py-3 px-5 rounded-lg bg-[#e9e9e9] text-sm font-bold text-gray-600 dark:bg-[#2f3031] dark:text-muted-foreground">View</button>
         </div>
       </section>
     </aside>

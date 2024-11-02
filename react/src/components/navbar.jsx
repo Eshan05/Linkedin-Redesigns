@@ -31,7 +31,8 @@ export const Navbar = () => {
   return (
     <nav className="flex items-center justify-between h-[5.25rem] gap-x-3 gap-y-1 bg-white dark:bg-[#191a1b] lg:px-6 lg:py-2 px-2 lg:mb-2">
       <aside className="items-center justify-center flex-1 hidden h-full lg:flex gap-x-2 ">
-        <IoLogoLinkedin className="text-5xl text-[#006699]" />
+        <IoLogoLinkedin className="text-5xl text-[#006699] dark:text-blue-500 " />
+        {/* <IoLogoLinkedin className="text-5xl text-[#006699] dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white via-white via-68% to-transparent to-[67%]" /> */}
         <div className="flex items-center w-3/5 px-3 mx-3 overflow-hidden border dark:border-0 rounded-full bg-neutral-100 dark:bg-[#242526]">
           <span className="p-2 text-gray-500">
             <IoSearch className="text-xl" />
@@ -39,7 +40,7 @@ export const Navbar = () => {
           <input
             type="text"
             placeholder="Search Linkedin"
-            className="p-3 outline-none bg-neutral-100 dark:bg-[#242526]"
+            className="p-3 outline-none bg-neutral-100 dark:bg-[#242526] dark:placeholder:text-muted-foreground dark:text-white"
           />
         </div>
       </aside>
@@ -50,12 +51,12 @@ export const Navbar = () => {
           return (
             <a
               key={index}
-              className={`px-8 justify-center flex rounded-lg py-3 ${activeIndex === index ? 'bg-[#ebf3f7]' : 'bg-transparent'}`}
+              className={`px-8 justify-center flex rounded-lg py-3 ${activeIndex === index ? 'bg-[#ebf3f7] dark:bg-[#303132]' : 'bg-transparent'}`}
               onClick={() => handleClick(index)}
             >
               <button className="flex flex-col items-center gap-y-1">
                 <Icon className={`text-[1.75rem] ${activeIndex === index ? 'text-[#006699]' : 'text-gray-500'}`} />
-                <span className={`text-xs ${activeIndex === index ? 'text-[#3585ae]' : 'text-gray-500'} uppercase font-medium tracking-wider`}>
+                <span className={`text-xs ${activeIndex === index ? 'text-[#3585ae] dark:text-muted-foreground' : 'text-gray-500'} uppercase font-medium tracking-wider`}>
                   {item.label}
                 </span>
               </button>
@@ -64,11 +65,11 @@ export const Navbar = () => {
         })}
       </main>
       <section className="items-center justify-center flex-1 hidden h-full px-4 md:flex gap-x-3 ">
-        <button className="grid w-10 rounded-full aspect-square bg-neutral-100 place-items-center">
-          <PiDotsNineBold className="text-xl text-neutral-600" />
+        <button className="grid w-10 rounded-full aspect-square bg-neutral-100 dark:bg-[#2f3031] place-items-center">
+          <PiDotsNineBold className="text-xl text-muted-foreground" />
         </button>
-        <button className="grid w-10 rounded-full aspect-square bg-neutral-100 place-items-center">
-          <GoBell className="text-xl text-neutral-600" />
+        <button className="grid w-10 rounded-full aspect-square bg-neutral-100 dark:bg-[#2f3031] place-items-center">
+          <GoBell className="text-xl text-muted-foreground" />
         </button>
         <aside className="relative flex items-center p-1 bg-gray-200 rounded-full min-w-10" onClick={toggleDropdown}>
           <img
@@ -84,7 +85,7 @@ export const Navbar = () => {
           {isOpen &&
             <div
               id="userDropdown"
-              className="absolute z-10 bg-white divide-y divide-gray-100 rounded-lg shadow top-1/2 right-1/2 w-44 dark:bg-gray-700 dark:divide-gray-600"
+              className="absolute z-10 bg-white divide-y divide-gray-100 rounded-lg shadow top-1/2 right-1/2 w-44 dark:bg-[#242526] dark:divide-[#303031]"
             >
               <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
                 <section className="flex items-center space-between">
@@ -110,9 +111,9 @@ export const Navbar = () => {
           }
           {/* <span className="hidden text-sm font-semibold pe-2 ps-2 text-neutral-500 2xl:inline">Name</span> */}
         </aside>
-        <button className="flex items-center justify-center px-3 py-2 font-bold border-2 rounded-full gap-x-2 aspect-square xl:aspect-auto border-neutral-100">
+        <button className="flex items-center justify-center px-3 py-2 font-bold border-2 rounded-full gap-x-2 aspect-square xl:aspect-auto border-neutral-100 dark:border-neutral-700 dark:bg-[#2f3031]">
           <CgCrown className="text-2xl text-yellow-600" />
-          <span className="hidden xl:block">Premium</span>
+          <span className="hidden xl:block dark:text-white">Premium</span>
         </button>
       </section>
     </nav>

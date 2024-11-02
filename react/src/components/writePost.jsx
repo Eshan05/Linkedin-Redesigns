@@ -33,7 +33,7 @@ export const WritePost = ({ onPost }) => {
           className="rounded-full w-14 aspect-square"
         />
         <input
-          className="w-full p-4 text-sm font-medium bg-gray-100 rounded-full"
+          className="w-full p-4 text-sm font-medium bg-gray-100 bg-[#252526] rounded-full dark:placeholder:text-muted-foreground dark:text-white"
           placeholder="Do you have any news to share?"
           value={content}
           onChange={(e) => setContent(e.target.value)}
