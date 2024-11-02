@@ -29,17 +29,17 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className="flex items-center justify-between h-[5.25rem] gap-x-3 gap-y-1 bg-white lg:px-6 lg:py-2 px-2 lg:mb-2">
+    <nav className="flex items-center justify-between h-[5.25rem] gap-x-3 gap-y-1 bg-white dark:bg-[#191a1b] lg:px-6 lg:py-2 px-2 lg:mb-2">
       <aside className="items-center justify-center flex-1 hidden h-full lg:flex gap-x-2 ">
         <IoLogoLinkedin className="text-5xl text-[#006699]" />
-        <div className="flex items-center w-3/5 px-3 mx-3 overflow-hidden border rounded-full bg-neutral-100">
+        <div className="flex items-center w-3/5 px-3 mx-3 overflow-hidden border dark:border-0 rounded-full bg-neutral-100 dark:bg-[#242526]">
           <span className="p-2 text-gray-500">
             <IoSearch className="text-xl" />
           </span>
           <input
             type="text"
             placeholder="Search Linkedin"
-            className="p-2 outline-none bg-neutral-100"
+            className="p-3 outline-none bg-neutral-100 dark:bg-[#242526]"
           />
         </div>
       </aside>

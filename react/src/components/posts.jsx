@@ -27,7 +27,7 @@ const Posts = () => {
     <div className="w-full">
       <WritePost onPost={handleNewPost} />
       {posts.map((post, index) => (
-        <article key={index} className="my-4 bg-white rounded-xl">
+        <article key={index} className="my-4 bg-white dark:bg-[#191a1b] rounded-xl">
           <header className="flex w-full p-3 gap-x-2">
             <img src={post.avatar} className="w-10 rounded-full aspect-square" alt="Avatar" />
             <section className="flex justify-between w-full">

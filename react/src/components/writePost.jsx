@@ -25,7 +25,7 @@ export const WritePost = ({ onPost }) => {
     }
   };
   return (
-    <div className="w-full p-2 bg-white rounded-xl">
+    <div className="w-full p-2 bg-white dark:bg-[#191a1b] rounded-xl">
       <header className="flex p-2 gap-x-4">
         <img
           src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
@@ -39,7 +39,7 @@ export const WritePost = ({ onPost }) => {
           onChange={(e) => setContent(e.target.value)}
           onKeyDown={handlePostSubmit} />
       </header>
-      <section className="flex px-6 mx-auto my-2 text-lg text-gray-400 lg:ml-auto lg:mr-1 w-fit gap-x-10">
+      <section className="flex px-6 mx-auto my-2 text-gray-400 text-md xl:text-lg lg:ml-auto lg:mr-1 w-fit gap-x-10">
         <div className="flex items-center cursor-pointer">
           <IoImageOutline className="w-10 text-2xl aspect-square" />
           Image
