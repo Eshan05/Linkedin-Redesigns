@@ -1,0 +1,1 @@
+Meant only for larger screens and only focusing on design

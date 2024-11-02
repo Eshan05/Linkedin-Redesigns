@@ -1,6 +1,10 @@
+import { Home } from "./components/home"
+
 function App() {
   return (
-    <div className='text-3xl underline'>Hi</div>
+    <main>
+      <Home />
+    </main>
   )
 }
 
