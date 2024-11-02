@@ -10,23 +10,6 @@ export const Navbar = () => {
   // Set the default active index to 0 (the first button)
   const [activeIndex, setActiveIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
-  const [placeholder, setPlaceholder] = useState('Search Linkedin');
-
-  const handleResize = () => {
-    if (window.innerWidth < 1024) {
-      setPlaceholder('Search');
-    } else {
-      setPlaceholder('Search Linkedin');
-    }
-  };
-
-  useEffect(() => {
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
   const handleClick = (index) => { setActiveIndex(index); };
   const toggleDropdown = () => { setIsOpen(!isOpen); };
@@ -46,8 +29,8 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className="flex items-center justify-between h-[5.25rem] gap-1 bg-white lg:px-6 lg:py-2">
-      <aside className="lg:flex items-center justify-center grow-1 shrink-[2] h-full gap-x-2 hidden ">
+    <nav className="flex items-center justify-between h-[5.25rem] gap-x-3 gap-y-1 bg-white lg:px-6 lg:py-2 px-2">
+      <aside className="items-center justify-center flex-1 hidden h-full lg:flex gap-x-2 ">
         <IoLogoLinkedin className="text-5xl text-[#006699]" />
         <div className="flex items-center w-3/5 px-3 mx-3 overflow-hidden border rounded-full bg-neutral-100">
           <span className="p-2 text-gray-500">
@@ -55,7 +38,7 @@ export const Navbar = () => {
           </span>
           <input
             type="text"
-            placeholder={placeholder}
+            placeholder="Search Linkedin"
             className="p-2 outline-none bg-neutral-100"
           />
         </div>
@@ -80,7 +63,7 @@ export const Navbar = () => {
           );
         })}
       </main>
-      <section className="flex items-center justify-center flex-1 h-full px-4 gap-x-3">
+      <section className="items-center justify-center flex-1 hidden h-full px-4 md:flex gap-x-3 ">
         <button className="grid w-10 rounded-full aspect-square bg-neutral-100 place-items-center">
           <PiDotsNineBold className="text-xl text-neutral-600" />
         </button>
@@ -119,11 +102,11 @@ export const Navbar = () => {
               </ul>
             </div>
           }
-          {/* <span className="hidden text-sm font-semibold pe-2 ps-2 text-neutral-500 xl:inline">Name</span> */}
+          {/* <span className="hidden text-sm font-semibold pe-2 ps-2 text-neutral-500 2xl:inline">Name</span> */}
         </aside>
-        <button className="flex items-center justify-center px-3 py-2 font-bold border-2 rounded-full gap-x-2 border-neutral-100">
+        <button className="flex items-center justify-center px-3 py-2 font-bold border-2 rounded-full gap-x-2 aspect-square xl:aspect-auto border-neutral-100">
           <CgCrown className="text-xl text-yellow-600" />
-          <span className="block">Premium</span>
+          <span className="hidden xl:block">Premium</span>
         </button>
       </section>
     </nav>
