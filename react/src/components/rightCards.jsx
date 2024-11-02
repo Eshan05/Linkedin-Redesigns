@@ -58,6 +58,25 @@ export const RightCards = () => {
           <h2 className="font-bold text-md">Top Courses</h2>
           <span className="inline-grid w-6 font-bold bg-gray-300 rounded-full max-w-6 place-items-center aspect-square"><BsInfo className="text-xl" /></span>
         </header>
+        <main>
+          <div className="flex items-center justify-between p-3 mx-2 my-3 bg-gray-100 rounded-lg gap-x-3">
+            <img src="https://cdn-icons-png.flaticon.com/512/4138/4138137.png" className="inline-block w-8 aspect-square" />
+            <article className="flex flex-col min-w-0 mr-auto text-sm">
+              <span className="inline-block font-semibold truncate line-clamp-1">UI/UX Design</span>
+              <span className="text-muted-foreground">John Doe</span>
+            </article>
+            <button className="block py-3 px-5 rounded-lg bg-[#e9e9e9] text-sm font-bold text-gray-600">View</button>
+          </div>
+          <div className="flex items-center justify-between p-3 mx-2 my-3 bg-gray-100 rounded-lg gap-x-3">
+            <img src="https://cdn-icons-png.flaticon.com/512/4138/4138137.png" className="inline-block w-8 aspect-square" />
+            <article className="flex flex-col min-w-0 mr-auto text-sm">
+              <span className="inline-block font-semibold truncate line-clamp-1 ">Illustrations</span>
+              <span className="truncate text-muted-foreground">Emma Green</span>
+            </article>
+            <button className="block py-3 px-5 rounded-lg bg-[#e9e9e9] text-sm font-bold text-gray-600">View</button>
+          </div>
+
+        </main>
       </section>
     </aside>
   );
