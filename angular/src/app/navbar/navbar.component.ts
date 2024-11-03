@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { ThemeToggleComponent } from "../theme-toggle/theme-toggle.component";
+import { ThemeService } from '../services/theme.service'; // Adjust the path as necessary
+import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
   imports: [ThemeToggleComponent],
   templateUrl: './navbar.component.html',
-  // styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-
+  constructor(public themeService: ThemeService) { }
 }
