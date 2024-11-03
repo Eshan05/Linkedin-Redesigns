@@ -12,7 +12,7 @@ export const ProfileCard = () => {
             className="w-20 rounded-full aspect-square"
           />
           <div className="flex flex-col items-start p-2">
-            <span className="block font-bold text-white">Name</span>
+            <span className="block font-bold dark:text-white">Name</span>
             <span className="block font-light text-muted-foreground">Profession</span>
           </div>
         </header>

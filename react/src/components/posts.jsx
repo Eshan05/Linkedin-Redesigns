@@ -32,7 +32,7 @@ const Posts = () => {
             <img src={post.avatar} className="w-10 rounded-full aspect-square" alt="Avatar" />
             <section className="flex justify-between w-full">
               <div className="flex flex-col">
-                <h2 className="font-bold text-white">{post.name} <span className="text-sm font-light text-muted-foreground">🞄 {post.time}</span></h2>
+                <h2 className="font-bold dark:text-white">{post.name} <span className="text-sm font-light text-muted-foreground">🞄 {post.time}</span></h2>
                 <span className="inline-block text-sm font-medium text-muted-foreground">{post.role}</span>
               </div>
               <div className="flex items-center !font-light text-gray-400 gap-x-1">
@@ -42,7 +42,7 @@ const Posts = () => {
             </section>
           </header>
           <main>
-            <p className="p-3 text-gray-100">{post.content}</p>
+            <p className="p-3 dark:text-gray-100">{post.content}</p>
             {post.image && <img src={post.image} alt="Post" className="" />}
           </main>
           <footer className="p-3">

@@ -1,0 +1,12 @@
+<p>Nav <app-theme-toggle></app-theme-toggle>
+</p>
+<script>
+  const theme = localStorage.getItem('theme');
+  const browserDark = window.matchMedia('(prefers-color-scheme: dark)').matches; if (theme !== null) {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+  } else if (browserDark) {
+    document.documentElement.classList.add('dark');
+  }
+</script>
