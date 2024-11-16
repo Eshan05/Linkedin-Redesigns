@@ -1,15 +1,28 @@
-<nav class="flex items-center justify-between dark:bg-[#1b1e23] px-3 py-1 m-2 rounded *:flex-1">
+<nav
+  class="flex items-center justify-between dark:bg-[#1b1e23] px-3 py-1 m-2 rounded *:flex-1 relative scrollbar-none">
   <i class="flex text-3xl fa-brands fa-linkedin"></i>
   <app-main-icons></app-main-icons>
   <div>
-    <section class="flex items-center justify-start ml-auto space-x-5 max-w-fit">
+    <section class="relative flex items-center justify-start ml-auto space-x-4 max-w-fit">
       <div
-        class="flex items-center gap-1 py-px px-1 rounded-full dark:bg-[#0e0f11] profile-icon justify-evenly -mr-5 lg:mr-px">
+        class="flex items-center gap-1 py-px px-1 rounded-full dark:bg-[#0e0f11] profile-icon justify-evenly -mr-5 lg:mr-px relative"
+        (click)="toggleDropdown()">
         <app-avatar
           [image]="'https://cdn-icons-png.flaticon.com/512/3135/3135715.png'"
           [size]="'small'"
           shape="circle"></app-avatar>
         <span class="text-lg material-symbols-outlined"> stat_minus_1 </span>
+        <div
+          *ngIf="dropdownVisible"
+          class="absolute right-0 mt-8 bg-white shadow-lg rounded-lg w-48 dark:bg-[#1a1a1a] dark:text-white z-10 top-0 overflow-hidden">
+          <ul>
+            <li class="px-4 py-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700">Profile</li>
+            <li class="px-4 py-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700">Settings</li>
+            <li class="px-4 py-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700">Logout</li>
+          </ul>
+          <aside class="flex items-center justify-center w-full p-2"><app-theme-toggle></app-theme-toggle>
+          </aside>
+        </div>
       </div>
       <div
         class="for-business-icon lg:flex hidden items-center gap-1 py-px pl-1 pr-2 rounded-full dark:bg-[#0e0f11] justify-evenly dark:text-gray-400">
