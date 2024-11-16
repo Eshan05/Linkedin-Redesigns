@@ -42,8 +42,8 @@
     <span class="text-xl material-symbols-outlined"> arrow_upward </span>
     <b>New Posts</b>
   </button>
-  <main class="flex flex-col items-center justify-center w-full gap-3 pt-4 feed xl:flex-row">
-    <section class="flex flex-col items-center justify-center flex-1 w-full">
+  <main class="flex flex-col items-center justify-center w-full gap-3 pt-4 xl:items-start feed xl:flex-row">
+    <section class="flex flex-col items-center justify-center flex-1 w-full space-y-4">
       <article class="w-full bg-[#1b1e23] rounded-lg relative overflow-clip">
         <div class="flex items-start justify-between p-4 rounded chat-card">
           <main class="flex items-center gap-2 user-section justify-evenly">
@@ -107,6 +107,15 @@
         </footer>
       </article>
     </section>
-    <section class="flex-col items-center justify-center flex-1 hidden xl:flex"></section>
+    <section class="flex-col items-center justify-center flex-1 hidden w-full space-y-4 xl:flex">
+      <app-post-card
+        [avatarImage]="'https://cdn-icons-png.flaticon.com/512/3135/3135715.png'"
+        [userName]="'Pertti Jalomaa'"
+        [userTime]="'3h'"
+        [userDescription]="'Machine Professional with 20+ years of experience'"
+        [postImage]="'https://placehold.co/600x400'"
+        [hashtags]="'#hashtag #hashtag #hashtag'"
+        [postText]="'Lorem Ipsum es simplemente el texto de relleno de las imprentas...'"></app-post-card>
+    </section>
   </main>
 </main>

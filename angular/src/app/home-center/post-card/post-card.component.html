@@ -1,0 +1,63 @@
+<article class="w-full bg-[#1b1e23] rounded-lg relative overflow-clip">
+  <div class="flex items-start justify-between p-4 rounded post-card">
+    <!-- User Section -->
+    <main class="flex items-center gap-2 user-section justify-evenly">
+      <app-avatar
+        [image]="avatarImage"
+        [size]="'large'"
+        shape="circle"
+        styleClass="p-1"></app-avatar>
+      <div class="flex flex-col">
+        <h3 class="flex items-center gap-1 text-sm">
+          <span class="font-semibold">{{ userName }}</span>
+          <span class="text-gray-400">·</span>
+          <span class="text-xs text-gray-400">{{ userTime }}</span>
+        </h3>
+        <p class="inline-block w-full overflow-hidden text-xs text-ellipsis !line-clamp-2 text-gray-400">
+          {{ userDescription }}
+        </p>
+      </div>
+    </main>
+    <!-- Post Action Buttons (More options & Close) -->
+    <aside class="flex items-center gap-1 p-1 text-xs text-right text-gray-400 post-btn-section min-w-14">
+      <button class="dark:bg-[#0a0a0a] aspect-square p-1 grid place-items-center text-gray-500 rounded">
+        <span class="inline-block text-xs leading-none material-symbols-outlined">more_horiz</span>
+      </button>
+      <button class="dark:bg-[#0a0a0a] aspect-square p-1 grid place-items-center text-gray-500 rounded">
+        <span class="inline-block text-xs leading-none text-red-500 material-symbols-outlined">close</span>
+      </button>
+    </aside>
+  </div>
+  <!-- Post Text Content -->
+  <p class="p-6 text-sm">{{ postText }}</p>
+  <!-- Post Hashtags -->
+  <div class="tags text-[#75b7ff] p-4 font-semibold text-sm">{{ hashtags }}</div>
+  <!-- Post Media Image -->
+  <footer class="relative flex items-center justify-between w-full overflow-hidden">
+    <img [src]="postImage" class="object-cover w-full" />
+    <!-- Post Interactions (Like, Comment, Share, Send) -->
+    <main
+      class="flex p-2 items-center justify-between w-[calc(100%_-_2rem)] m-4 h-12 rounded absolute bottom-0 bg-[#1b1e23]">
+      <div
+        class="flex items-center gap-1 py-px px-1 rounded-full dark:bg-[#0e0f11] profile-icon justify-evenly relative">
+        <app-avatar [image]="'https://cdn-icons-png.flaticon.com/512/3135/3135715.png'" [size]="'small'"
+          shape="circle"></app-avatar>
+        <span class="text-lg material-symbols-outlined">stat_minus_1</span>
+      </div>
+      <aside class="flex items-center gap-2 p-1 space-x-6 justify-evenly">
+        <button>
+          <span class="text-xl material-symbols-outlined">thumb_up</span>
+        </button>
+        <button>
+          <span class="text-xl material-symbols-outlined">add_comment</span>
+        </button>
+        <button>
+          <span class="text-xl material-symbols-outlined">repeat</span>
+        </button>
+        <button>
+          <span class="text-xl material-symbols-outlined">send</span>
+        </button>
+      </aside>
+    </main>
+  </footer>
+</article>
