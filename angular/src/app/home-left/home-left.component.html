@@ -1,0 +1,57 @@
+<main class="grid w-full place-items-center *:dark:bg-[#1b1e23] *:w-full gap-3 *:rounded">
+  <article class="p-2">
+    <header class="relative">
+      <img src="https://t4.ftcdn.net/jpg/05/05/36/69/360_F_505366958_JhBdhJfo4HcKGQRFbR6ULibKwwF0dFxN.jpg"
+        class="block object-cover w-full rounded" />
+      <app-avatar [image]="'https://cdn-icons-png.flaticon.com/512/3135/3135715.png'" [size]="'large'"
+        shape="circle" styleClass="ml-2 -mt-10"></app-avatar>
+    </header>
+    <main class="w-full p-2">
+      <h2 class="flex items-center gap-2"><b>Aksel Suokas</b>
+        <button class="p-1 aspect-square grid place-items-center rounded bg-[#0a0a0a]">
+          <span class="inline-block -mt-[2px] text-xs aspect-square material-symbols-outlined"> edit </span>
+        </button>
+      </h2>
+      <div class="flex flex-wrap gap-2 mt-4">
+        <p
+          class="py-px pl-1 pr-2 rounded-full dark:bg-[#0e0f11] justify-evenly dark:text-white inline-flex w-max items-center">
+          <span class="grid w-6 text-xs aspect-square material-symbols-outlined place-items-center"> visibility </span>
+          <strong class="!text-[.55rem] font-normal tracking-tight">62 Profile views</strong>
+        </p>
+        <p
+          class="py-px pl-1 pr-2 rounded-full dark:bg-[#0e0f11] justify-evenly dark:text-white inline-flex w-max items-center">
+          <span class="grid w-6 text-xs aspect-square material-symbols-outlined place-items-center"> eyeglasses </span>
+          <strong class="!text-[.55rem] font-normal tracking-tight">612 Impressions</strong>
+        </p>
+        <p
+          class="py-px pl-1 pr-2 rounded-full dark:bg-[#0e0f11] justify-evenly dark:text-white inline-flex w-max items-center">
+          <span class="grid w-6 text-xs aspect-square material-symbols-outlined place-items-center"> book </span>
+          <strong class="!text-[.55rem] font-normal tracking-tight">My saved items</strong>
+        </p>
+      </div>
+    </main>
+  </article>
+  <section class="p-4">
+    <h2 class="flex items-center justify-between w-full"><b>My pages</b>
+      <button
+        class="flex items-center rounded-lg gap-1 bg-[#0a0a0a] pl-2 pr-1">
+        <em class="!text-[.5rem] not-italic">Open</em>
+        <span class="text-sm material-symbols-outlined"> arrow_drop_down </span>
+      </button>
+    </h2>
+  </section>
+  <section class="p-4">
+    <h2 class="flex items-center justify-between w-full"><b>Discover</b>
+      <button
+        class="flex items-center rounded-lg gap-1 bg-[#0a0a0a] pl-2 pr-1">
+        <em class="!text-[.5rem] not-italic">Open</em>
+        <span class="text-sm material-symbols-outlined"> arrow_drop_down </span>
+      </button>
+    </h2>
+  </section>
+  <footer class="!bg-transparent flex gap-2 mt-2 w-full justify-center items-center">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/LinkedIn_2021.svg/2560px-LinkedIn_2021.svg.png"
+      class="w-16 h-4" /> <span class="text-xs font-semibold text-gray-300">LinkedIn Corporation © 2023</span>
+  </footer>
+</main>

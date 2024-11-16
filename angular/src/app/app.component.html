@@ -1,6 +1,17 @@
 <main
-  class="bg-[#f1f2f3] dark:bg-[#0a0a0a] dark:text-white overflow-x-hidden w-full p-1 relative scrollbar-none min-h-screen">
-  <app-navbar>
-  </app-navbar>
-  <main>Hi</main>
+  class="bg-[#f1f2f3] dark:bg-[#0a0a0a] dark:text-white overflow-x-hidden w-full p-1 relative scrollbar-none min-h-screen flex justify-center flex-col items-center">
+  <nav class="flex-1 w-full mb-2 max-h-16">
+    <app-navbar></app-navbar>
+  </nav>
+  <article class="relative flex flex-1 w-full px-3 py-1 m-2 space-x-6">
+    <section class="flex-1 hidden lg:flex">
+      <app-home-left></app-home-left>
+    </section>
+    <main class="lg:grow-[2] grow !ml-0 lg:!ml-6">
+      <app-home-center></app-home-center>
+    </main>
+    <section class="flex-1 hidden md:flex">
+      <app-home-right></app-home-right>
+    </section>
+  </article>
 </main>

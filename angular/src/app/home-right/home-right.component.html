@@ -1,0 +1,17 @@
+<main class="grid w-full place-items-center *:dark:bg-[#1b1e23] *:w-full gap-3 *:rounded *:p-4">
+  <section class="w-full">
+    <div class="mb-4">
+      <app-avatar [image]="'https://cdn-icons-png.flaticon.com/512/3135/3135715.png'" [size]="'medium'"
+        shape="circle"></app-avatar>
+    </div>
+    <div class="flex items-center justify-between gap-2 p-2 search dark:bg-[#0a0a0a] rounded">
+      <div class="flex items-center gap-2">
+        <span class="text-base material-symbols-outlined"> search </span>
+        <input type="text" placeholder="Search messages" class="dark:bg-[#0a0a0a] text-gray-400 focus:outline-none">
+      </div>
+      <button class="dark:bg-[#1b1e25] aspect-square p-1 grid place-items-center text-gray-500 rounded">
+        <span class="inline-block text-xs leading-none material-symbols-outlined">page_info</span>
+      </button>
+    </div>
+  </section>
+</main>
