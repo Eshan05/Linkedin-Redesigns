@@ -1,9 +1,9 @@
-<section class="flex items-center justify-center dark:bg-[#1b1e23] gap-7 w-full">
+<section class="tab:flex items-center justify-center dark:bg-[#1b1e23] gap-7 w-full grow hidden">
   <button
     class="pt-2"
     [ngClass]="{ 
       'text-[#f8f8f8]': activeButton === 0, 
-      'text-gray-400': activeButton !== 0 
+      'text-gray-500': activeButton !== 0 
     }"
     (click)="setActiveButton(0)">
     <span
@@ -15,7 +15,7 @@
     class="pt-2 font-thin"
     [ngClass]="{ 
       'text-[#f8f8f8]': activeButton === 1, 
-      'text-gray-400': activeButton !== 1 
+      'text-gray-500': activeButton !== 1 
     }"
     (click)="setActiveButton(1)">
     <span
@@ -27,7 +27,7 @@
     class="pt-2 font-thin"
     [ngClass]="{ 
       'text-[#f8f8f8]': activeButton === 2, 
-      'text-gray-400': activeButton !== 2 
+      'text-gray-500': activeButton !== 2 
     }"
     (click)="setActiveButton(2)">
     <span
@@ -39,7 +39,7 @@
     class="pt-2 font-thin"
     [ngClass]="{ 
       'text-[#f8f8f8]': activeButton === 3, 
-      'text-gray-400': activeButton !== 3 
+      'text-gray-500': activeButton !== 3 
     }"
     (click)="setActiveButton(3)">
     <span
@@ -51,7 +51,7 @@
     class="pt-2 font-thin"
     [ngClass]="{ 
       'text-[#f8f8f8]': activeButton === 4, 
-      'text-gray-400': activeButton !== 4 
+      'text-gray-500': activeButton !== 4 
     }"
     (click)="setActiveButton(4)">
     <span

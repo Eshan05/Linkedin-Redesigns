@@ -1,0 +1,14 @@
+<div
+  [ngClass]="avatarClasses"
+  [ngStyle]="style"
+  class="flex !aspect-square justify-center items-center relative overflow-hidden text-center trucnate">
+  <ng-container *ngIf="image; else labelContent">
+    <!-- If image is provided, display the image -->
+    <img [src]="image" alt="avatar" class="avatar-image" />
+  </ng-container>
+  <ng-template #labelContent>
+    <!-- If no image, display the label or custom content -->
+    <span *ngIf="!label && !content" class="avatar-label">{{ label }}</span>
+    <ng-content></ng-content> <!-- For custom content -->
+  </ng-template>
+</div>

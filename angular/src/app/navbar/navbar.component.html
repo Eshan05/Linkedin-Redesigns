@@ -1,9 +1,28 @@
-<nav class="flex items-center justify-between dark:bg-[#1b1e23] px-3 py-1 m-2 rounded">
-  <i class="block text-3xl fa-brands fa-linkedin"></i>
+<nav class="flex items-center justify-between dark:bg-[#1b1e23] px-3 py-1 m-2 rounded *:flex-1">
+  <i class="flex text-3xl fa-brands fa-linkedin"></i>
   <app-main-icons></app-main-icons>
-  <section class="flex items-center gap-6 justify-evenly">
-    <div class="profile-icon"></div>
-    <div class="for-business-icon"></div>
-    <div class="advertise-icon"></div>
-  </section>
+  <div>
+    <section class="flex items-center justify-start ml-auto space-x-5 max-w-fit">
+      <div
+        class="flex items-center gap-1 py-px px-1 rounded-full dark:bg-[#0e0f11] profile-icon justify-evenly -mr-5 lg:mr-px">
+        <app-avatar
+          [image]="'https://cdn-icons-png.flaticon.com/512/3135/3135715.png'"
+          [size]="'small'"
+          shape="circle"></app-avatar>
+        <span class="text-lg material-symbols-outlined"> stat_minus_1 </span>
+      </div>
+      <div
+        class="for-business-icon lg:flex hidden items-center gap-1 py-px pl-1 pr-2 rounded-full dark:bg-[#0e0f11] justify-evenly dark:text-gray-400">
+        <span class="grid w-6 text-lg aspect-square material-symbols-outlined place-items-center"> currency_exchange
+        </span>
+        <strong class="text-sm font-normal tracking-tight">For business</strong>
+      </div>
+      <div
+        class="advertise-icon lg:flex hidden items-center gap-1 py-px pl-1 pr-2 rounded-full dark:bg-[#0e0f11] justify-evenly dark:text-gray-400 !-mr-5">
+        <span class="grid w-6 text-lg aspect-square material-symbols-outlined place-items-center"> ads_click </span>
+        <strong class="text-sm font-normal tracking-tight">Advertise</strong>
+      </div>
+      <div class="advertise-icon"></div>
+    </section>
+  </div>
 </nav>

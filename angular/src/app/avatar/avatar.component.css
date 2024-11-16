@@ -1,0 +1,40 @@
+.avatar {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.avatar.small {
+  width: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.avatar.medium {
+  width: 2.25rem;
+  font-size: 1.2rem;
+}
+
+.avatar.large {
+  width: 3.75rem;
+  font-size: 1.5rem;
+}
+
+.avatar.xlarge {
+  width: 5rem;
+  font-size: 2rem;
+}
+
+.avatar.circle { border-radius: 50%; }
+.avatar.square { border-radius: 0; }
+
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-label {
+  display: inline-block;
+  line-height: inherit;
+}
+
+.avatar span { line-height: inherit; }
