@@ -3,16 +3,20 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from "./navbar/navbar.component";
 import { ThemeToggleComponent } from "./theme-toggle/theme-toggle.component";
 import { NgIf } from '@angular/common';
+import { ThemeService } from './services/theme.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, NgIf],
+  imports: [RouterOutlet, NavbarComponent, NgIf, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  darkMode = signal<boolean>(false);
   title = 'angular';
+  darkMode = signal<boolean>(false);
   // @HostBinding('class.dark') get mode() { return this.darkMode(); }
+
+  constructor(public themeService: ThemeService) { }
 }

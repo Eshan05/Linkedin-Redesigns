@@ -1,0 +1,8 @@
+button.active {
+  background-color: #4caf50; 
+  color: white;
+}
+
+button.active .material-symbols-outlined {
+  color: white;
+}

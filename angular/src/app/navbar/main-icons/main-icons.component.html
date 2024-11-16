@@ -1,8 +1,62 @@
-<section
-  class="flex items-center justify-center dark:bg-[#1b1e23] dark:*:bg-[#1b1e23] child dark:*:color-[#767676] gap-7 w-full">
-  <button class="pt-2"><span class="material-symbols-outlined"> home </span></button>
-  <button class="pt-2 font-thin "><span class="material-symbols-outlined"> hub </span></button>
-  <button class="pt-2 font-thin "><span class="material-symbols-outlined"> work </span></button>
-  <button class="pt-2 font-thin "><span class="material-symbols-outlined"> chat </span></button>
-  <button class="pt-2 font-thin "><span class="material-symbols-outlined"> notifications </span></button>
+<section class="flex items-center justify-center dark:bg-[#1b1e23] gap-7 w-full">
+  <button
+    class="pt-2"
+    [ngClass]="{ 
+      'text-[#f8f8f8]': activeButton === 0, 
+      'text-gray-400': activeButton !== 0 
+    }"
+    (click)="setActiveButton(0)">
+    <span
+      class="material-symbols-outlined"
+      [ngStyle]="{ 'font-variation-settings': activeButton === 0 ? '\'FILL\' 1, \'wght\' 400, \'GRAD\' 0, \'opsz\' 24' : '\'FILL\' 0, \'wght\' 400, \'GRAD\' 0, \'opsz\' 24' }">
+      home </span>
+  </button>
+  <button
+    class="pt-2 font-thin"
+    [ngClass]="{ 
+      'text-[#f8f8f8]': activeButton === 1, 
+      'text-gray-400': activeButton !== 1 
+    }"
+    (click)="setActiveButton(1)">
+    <span
+      class="material-symbols-outlined"
+      [ngStyle]="{ 'font-variation-settings': activeButton === 1 ? '\'FILL\' 1, \'wght\' 400, \'GRAD\' 0, \'opsz\' 24' : '\'FILL\' 0, \'wght\' 400, \'GRAD\' 0, \'opsz\' 24' }">
+      hub </span>
+  </button>
+  <button
+    class="pt-2 font-thin"
+    [ngClass]="{ 
+      'text-[#f8f8f8]': activeButton === 2, 
+      'text-gray-400': activeButton !== 2 
+    }"
+    (click)="setActiveButton(2)">
+    <span
+      class="material-symbols-outlined"
+      [ngStyle]="{ 'font-variation-settings': activeButton === 2 ? '\'FILL\' 1, \'wght\' 400, \'GRAD\' 0, \'opsz\' 24' : '\'FILL\' 0, \'wght\' 400, \'GRAD\' 0, \'opsz\' 24' }">
+      work </span>
+  </button>
+  <button
+    class="pt-2 font-thin"
+    [ngClass]="{ 
+      'text-[#f8f8f8]': activeButton === 3, 
+      'text-gray-400': activeButton !== 3 
+    }"
+    (click)="setActiveButton(3)">
+    <span
+      class="material-symbols-outlined"
+      [ngStyle]="{ 'font-variation-settings': activeButton === 3 ? '\'FILL\' 1, \'wght\' 400, \'GRAD\' 0, \'opsz\' 24' : '\'FILL\' 0, \'wght\' 400, \'GRAD\' 0, \'opsz\' 24' }">
+      chat </span>
+  </button>
+  <button
+    class="pt-2 font-thin"
+    [ngClass]="{ 
+      'text-[#f8f8f8]': activeButton === 4, 
+      'text-gray-400': activeButton !== 4 
+    }"
+    (click)="setActiveButton(4)">
+    <span
+      class="material-symbols-outlined"
+      [ngStyle]="{ 'font-variation-settings': activeButton === 4 ? '\'FILL\' 1, \'wght\' 400, \'GRAD\' 0, \'opsz\' 24' : '\'FILL\' 0, \'wght\' 400, \'GRAD\' 0, \'opsz\' 24' }">
+      notifications </span>
+  </button>
 </section>
