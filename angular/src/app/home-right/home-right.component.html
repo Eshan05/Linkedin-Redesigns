@@ -7,11 +7,99 @@
     <div class="flex items-center justify-between gap-2 p-2 search dark:bg-[#0a0a0a] rounded">
       <div class="flex items-center gap-2">
         <span class="text-base material-symbols-outlined"> search </span>
-        <input type="text" placeholder="Search messages" class="dark:bg-[#0a0a0a] text-gray-400 focus:outline-none">
+        <input type="text" placeholder="Search messages" class="text-gray-400 bg-transparent focus:outline-none">
       </div>
       <button class="dark:bg-[#1b1e25] aspect-square p-1 grid place-items-center text-gray-500 rounded">
         <span class="inline-block text-xs leading-none material-symbols-outlined">page_info</span>
       </button>
     </div>
+    <div class="flex items-center *:flex-1 mt-4 mb-1 text-gray-400 dark:bg-[#0a0a0a] p-1 rounded">
+      <button class="dark:bg-[#1b1e25] p-2 rounded-lg">Focused</button>
+      <button>Other</button>
+    </div>
+    <ul class="flex flex-col w-full space-y-1 ">
+      <li class="flex items-start justify-between chat-card dark:bg-[#0e0f11] p-2 rounded">
+        <main class="flex items-center gap-2 user-section justify-evenly">
+          <app-avatar [image]="'https://cdn-icons-png.flaticon.com/512/3135/3135715.png'" [size]="'large'"
+            shape="circle" styleClass="p-1"></app-avatar>
+          <div class="flex flex-col">
+            <h3 class="flex items-center gap-1 text-sm">
+              <span class="font-semibold">Jan Silasuomi</span>
+              <span class="text-gray-400">·</span>
+            </h3>
+            <p class="inline-block w-full overflow-hidden text-xs text-ellipsis !line-clamp-2 text-gray-400">Jan: Jan
+              sent you a recommendation. Review</p>
+          </div>
+        </main>
+        <aside class="p-1 text-xs text-right text-gray-400 date-section min-w-14"> Oct 19 </aside>
+      </li>
+      <li class="flex items-start justify-between chat-card dark:bg-[#0e0f11] p-2 rounded">
+        <main class="flex items-center gap-2 user-section justify-evenly">
+          <app-avatar [image]="'https://cdn-icons-png.flaticon.com/512/3135/3135715.png'" [size]="'large'"
+            shape="circle" styleClass="p-1"></app-avatar>
+          <div class="flex flex-col">
+            <h3 class="flex items-center gap-1 text-sm">
+              <span class="font-semibold">Pertti Jalomaa</span>
+              <span class="text-gray-400">·</span>
+            </h3>
+            <p class="inline-block w-full overflow-hidden text-xs text-ellipsis !line-clamp-2 text-gray-400">You: Aksel
+              sent you a recommendation. Review</p>
+          </div>
+        </main>
+        <aside class="p-1 text-xs text-right text-gray-400 date-section min-w-14"> Oct 19 </aside>
+      </li>
+      <li class="flex items-start justify-between chat-card dark:bg-[#0e0f11] p-2 rounded">
+        <main class="flex items-center gap-2 user-section justify-evenly">
+          <app-avatar [image]="'https://cdn-icons-png.flaticon.com/512/3135/3135715.png'" [size]="'large'"
+            shape="circle" styleClass="p-1"></app-avatar>
+          <div class="flex flex-col">
+            <h3 class="flex items-center gap-1 text-sm">
+              <span class="font-semibold">Jenny Derek</span>
+              <span class="text-gray-400">·</span>
+            </h3>
+            <p class="inline-block w-full overflow-hidden text-xs text-ellipsis !line-clamp-2 text-gray-400">Jan: Jan
+              sent you a recommendation. Review</p>
+          </div>
+        </main>
+        <aside class="p-1 text-xs text-right text-gray-400 date-section min-w-14"> Oct 19 </aside>
+      </li>
+      <li class="flex items-start justify-between chat-card dark:bg-[#0e0f11] p-2 rounded">
+        <main class="flex items-center gap-2 user-section justify-evenly">
+          <app-avatar [image]="'https://cdn-icons-png.flaticon.com/512/3135/3135715.png'" [size]="'large'"
+            shape="circle" styleClass="p-1"></app-avatar>
+          <div class="flex flex-col">
+            <h3 class="flex items-center gap-1 text-sm">
+              <span class="font-semibold">Lula Hesico</span>
+              <span class="text-gray-400">·</span>
+            </h3>
+            <p class="inline-block w-full overflow-hidden text-xs text-ellipsis !line-clamp-2 text-gray-400">Lula: Lula
+              sent you a recommendation. Review</p>
+          </div>
+        </main>
+        <aside class="p-1 text-xs text-right text-gray-400 date-section min-w-14"> Oct 19 </aside>
+      </li>
+      <li class="flex items-start justify-between chat-card dark:bg-[#0e0f11] p-2 rounded">
+        <main class="flex items-center gap-2 user-section justify-evenly">
+          <app-avatar [image]="'https://cdn-icons-png.flaticon.com/512/3135/3135715.png'" [size]="'large'"
+            shape="circle" styleClass="p-1"></app-avatar>
+          <div class="flex flex-col">
+            <h3 class="flex items-center gap-1 text-sm">
+              <span class="font-semibold">Ajay Nebil</span>
+              <span class="text-gray-400">·</span>
+            </h3>
+            <p class="inline-block w-full overflow-hidden text-xs text-ellipsis !line-clamp-2 text-gray-400">You: Aksel
+              sent you a recommendation. Review</p>
+          </div>
+        </main>
+        <aside class="p-1 text-xs text-right text-gray-400 date-section min-w-14"> Oct 19 </aside>
+      </li>
+    </ul>
+    <button class="text-[#75b8fe] flex items-center gap-1 mt-4 justify-center w-full">See more <span
+        class="text-base material-symbols-outlined"> stat_minus_1 </span></button>
+  </section>
+  <section>
+    <h3 class="flex items-center justify-center w-full gap-2 text-[.55rem]">
+      <span class="text-xs material-symbols-outlined"> lightbulb_2 </span> Get the latest jobs and industry news
+    </h3>
   </section>
 </main>

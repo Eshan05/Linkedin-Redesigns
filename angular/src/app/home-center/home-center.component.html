@@ -1,1 +1,112 @@
-<p>home-center works!</p>
+<main class="flex flex-col items-center justify-center space-y-3">
+  <header class="flex gap-4 *:dark:bg-[#1b1e23] p-4 *:py-3 *:px-6 *:rounded rounded w-full">
+    <section class="flex flex-col flex-1 gap-2">
+      <h2 class="my-2">Start writing to post</h2>
+      <button
+        class="flex items-center gap-2 justify-center pl-3 mb-2 py-1 pr-4 rounded-full border-2 border-[#75b8fe] text-[#75b8fe] w-fit">
+        <span class="text-lg material-symbols-outlined"> add </span>
+        <b class="text-xs xl:text-sm line-clamp-1">Start a post</b>
+      </button>
+    </section>
+    <section class="flex-col flex-1 hidden gap-2 lg:flex">
+      <h2 class="my-2">Or choose</h2>
+      <div class="flex *:p-2 flex-wrap justify-center gap-4 *:aspect-square">
+        <button class="dark:bg-[#0a0a0a] grid place-items-center rounded">
+          <span class="inline-block text-[2rem] leading-none material-symbols-outlined text-[#ffb893]">newsmode</span>
+        </button>
+        <button class="dark:bg-[#0a0a0a] grid place-items-center rounded">
+          <span class="inline-block text-[2rem] leading-none material-symbols-outlined text-[#eab7ff]">work</span>
+        </button>
+        <button class="dark:bg-[#0a0a0a] grid place-items-center rounded">
+          <span class="inline-block text-[2rem] leading-none material-symbols-outlined text-[#85daff]">perm_media</span>
+        </button>
+      </div>
+    </section>
+    <section class="flex flex-col gap-2 flex-[2_1_0]">
+      <h2 class="my-2">Filter your feed</h2>
+      <div class="flex flex-wrap gap-2 mt-4">
+        <p class="py-2 pl-3 pr-4 rounded-full dark:bg-[#0e0f11] dark:text-white inline-flex items-center flex-shrink-0">
+          <span
+            class="grid w-6 text-base aspect-square material-symbols-outlined place-items-center pe-2">schedule</span>
+          <strong class="xl:!text-base text-[.75rem] font-normal tracking-tight">Recent first</strong>
+        </p>
+        <p class="py-2 pl-3 pr-4 rounded-full dark:bg-[#0e0f11] dark:text-white inline-flex items-center flex-shrink-0">
+          <span
+            class="grid w-6 text-base aspect-square material-symbols-outlined place-items-center pe-2">rss_feed</span>
+          <strong class="xl:!text-base text-[.75rem] font-normal tracking-tight">Connections only</strong>
+        </p>
+      </div>
+    </section>
+  </header>
+  <button class="bg-[#75b7ff] text-black flex items-center gap-2 justify-center pl-4 pr-5 text-sm rounded-full py-1">
+    <span class="text-xl material-symbols-outlined"> arrow_upward </span>
+    <b>New Posts</b>
+  </button>
+  <main class="flex flex-col items-center justify-center w-full gap-3 pt-4 feed xl:flex-row">
+    <section class="flex flex-col items-center justify-center flex-1 w-full">
+      <article class="w-full bg-[#1b1e23] rounded-lg relative overflow-clip">
+        <div class="flex items-start justify-between p-4 rounded chat-card">
+          <main class="flex items-center gap-2 user-section justify-evenly">
+            <app-avatar [image]="'https://cdn-icons-png.flaticon.com/512/3135/3135715.png'" [size]="'large'"
+              shape="circle" styleClass="p-1"></app-avatar>
+            <div class="flex flex-col">
+              <h3 class="flex items-center gap-1 text-sm">
+                <span class="font-semibold">Pertti Jalomaa</span>
+                <span class="text-gray-400">·</span>
+                <span class="text-xs text-gray-400">3h</span>
+              </h3>
+              <p class="inline-block w-full overflow-hidden text-xs text-ellipsis !line-clamp-2 text-gray-400">Machine
+                Professional with<br /> 20+ years of experience</p>
+            </div>
+          </main>
+          <aside class="flex items-center gap-1 p-1 text-xs text-right text-gray-400 post-btn-section min-w-14">
+            <button class="dark:bg-[#0a0a0a] aspect-square p-1 grid place-items-center text-gray-500 rounded">
+              <span class="inline-block text-xs leading-none material-symbols-outlined">more_horiz</span>
+            </button>
+            <button class="dark:bg-[#0a0a0a] aspect-square p-1 grid place-items-center text-gray-500 rounded">
+              <span class="inline-block text-xs leading-none text-red-500 material-symbols-outlined">close</span>
+            </button>
+          </aside>
+        </div>
+        <p class="p-6 text-sm"> Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
+          Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N.
+          del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera
+          que logró hacer un libro de textos especimen.<br /><br /> No sólo sobrevivió 500 años, sino que tambien
+          ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue
+          popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum,
+          y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones
+          de Lorem Ipsum. </p>
+        <div class="tags text-[#75b7ff] p-4 font-semibold text-sm">#hashtag #hashtag #hashtag</div>
+        <footer class="relative flex items-center justify-between w-full overflow-hidden">
+          <img src="https://placehold.co/600x400" class="object-cover w-full" />
+          <main
+            class="flex p-2 items-center justify-between w-[calc(100%_-_2rem)] m-4 h-12 rounded absolute bottom-0 bg-[#1b1e23]">
+            <div
+              class="flex items-center gap-1 py-px px-1 rounded-full dark:bg-[#0e0f11] profile-icon justify-evenly relative">
+              <app-avatar
+                [image]="'https://cdn-icons-png.flaticon.com/512/3135/3135715.png'"
+                [size]="'small'"
+                shape="circle"></app-avatar>
+              <span class="text-lg material-symbols-outlined"> stat_minus_1 </span>
+            </div>
+            <aside class="flex items-center gap-2 p-1 space-x-6 justift-evenly">
+              <button class="">
+                <span class="text-xl material-symbols-outlined"> thumb_up </span>
+              </button>
+              <button class="">
+                <span class="text-xl material-symbols-outlined"> add_comment </span>
+              </button>
+              <button class="">
+                <span class="text-xl material-symbols-outlined"> repeat </span>
+              </button>
+              <button class="">
+                <span class="text-xl material-symbols-outlined"> send </span>
+              </button>
+            </aside>
+          </main>
+        </footer>
+      </article>
+    </section>
+    <section class="flex-col items-center justify-center flex-1 hidden xl:flex"></section>
+  </main>
+</main>
