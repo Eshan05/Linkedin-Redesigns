@@ -34,3 +34,11 @@
   .text-muted { color: hsl(var(--muted)); }
   .text-muted-foreground { color: hsl(var(--muted-foreground)); }
 }
+
+/* .material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+} */
